@@ -131,19 +131,19 @@ class Action extends AdminAbstract
 			rename("{$filePath}.part", $filePath);
 		}
 		
-		//$finfo = finfo_open(FILEINFO_MIME_TYPE);
-	    //$mime = finfo_file($finfo, $filePath);
+		$finfo = finfo_open(FILEINFO_MIME_TYPE);
+	    $mime = finfo_file($finfo, $filePath);
 	
-		$exif = exif_read_data($filePath, 'IFD0');
+		//$exif = exif_read_data($filePath, 'IFD0');
 	
 		$time = time();
 		$image = _model('images')->create(array('album_id'=>$album_id,
 													  'url'=>$pathUpload . DIRECTORY_SEPARATOR . $fileName,
-												      'mime'=>$exif['MimeType'],
-													  'size'=>$exif['FileSize'],
-													  'height'=>$exif['COMPUTED']['Height'],
-													  'width'=>$exif['COMPUTED']['Width'],
-													  'date'=>$exif['DateTimeOriginal'],
+												      'mime'=>$mime,
+													  //'size'=>$exif['FileSize'],
+													  //'height'=>$exif['COMPUTED']['Height'],
+													  //'width'=>$exif['COMPUTED']['Width'],
+													  //'date'=>$exif['DateTimeOriginal'],
 													  'description'=>'',
 													  'created'=>$time,
 													  'updated'=>$time));
