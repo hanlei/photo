@@ -1,0 +1,58 @@
+{extends file='admin/layout.html'}
+{block name=body}
+
+<div id="content" class="container_16 clearfix">
+	<div class="grid_5">
+		<p>
+			<label>相册搜索 <a href="?url=admin/album/edit">[添加]</a></label>
+			<input type="text" name="search" value="{$search}"/>
+		</p>
+	</div>
+
+	<div class="grid_2">
+		<p>
+			<label>&nbsp;</label>
+			<input type="submit" value="Search" />
+		</p>
+	</div>
+    <script type="text/javascript" charset="utf-8">
+    $('div.grid_2 input').click(function(){
+        var search = $('input[name=search]').val();
+        location.href = '?url=admin/album/getList&search='+search;
+        return false;
+    });
+    </script>
+	<div class="grid_16">
+		<table>
+			<thead>
+				<tr>
+					<th>相册名称</th> 
+					<th>相册描述</th>               
+					<th>修改时间</th>
+					<th colspan="3" width="20%">操作</th>
+				</tr>
+			</thead>
+            {include file='admin/page.html'}
+			<tbody>
+                {foreach $data as $val}
+				<tr>
+					<td>{$val.name}</td>
+					<td>{$val.description}</td>
+					<td>{date('Y-m-d h:m:s', $val.updated)}</td>
+					<td>
+                        <a href="?url=admin/album/edit&id={$val.id}&page_no={_GET('page_no',1)}" class="edit">Edit</a>
+                    </td>
+					<td>
+                        <a href="?url=admin/album/upload&id={$val.id}&page_no={_GET('page_no',1)}" class="edit">upload</a>
+                    </td>
+					<td>
+                        <a href="?url=admin/album/delete&id={$val.id}" class="delete">Delete</a>
+                    </td>
+				</tr>
+                {/foreach}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{/block}

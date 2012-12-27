@@ -1,0 +1,19 @@
+{if !empty($pager) && $pager->getPages() > 1}
+<tfoot>
+	<tr>
+		<td colspan="5" class="pagination">
+            {foreach $pager->getPagesArray(4) as $val}
+                {if $pager->getPage() == $val}
+				<span class="active curved">{$val}</span>
+                {else}
+                <a href="{$pager->link($val)}" class="curved">{$val}</a>
+                {/if}
+            {/foreach}
+            {if $val < $pager->getPages()}
+            {if $val+1 < $pager->getPages()} ... {/if}
+                <a href="{$pager->link($pager->getPages())}" class="curved">{$pager->getPages()}</a>
+            {/if}
+		</td>
+	</tr>
+</tfoot>
+{/if}

@@ -1,0 +1,20 @@
+{
+    "name": "minmb/phpmailer",
+    "description": "PHPMailer is a Full Featured Email Transfer Class for PHP",
+    "authors": [
+        {
+            "name": "Jim Jagielski",
+            "email": "jimjag@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0"
+    },
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "*",
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "classmap": ["class.phpmailer.php", "class.pop3.php", "class.smtp.php"]
+    }
+}
