@@ -18,11 +18,12 @@ class Action extends ActionAbstract
 		// http://example.com/Services/images/cropped_200_300/1.png;
 		// http://example.com/Services/images/fixed_200/1.png;
 		// http://example.com/Services/images/fixed_200_300/1.png;
-
+		/*
 		if (@$_SERVER['HTTP_IF_MODIFIED_SINCE'] && (strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) - time() < 60)) {
 		    header("HTTP/1.1 304 Not Modified", true);
 		    exit;
 		}
+		*/
 		header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 
 		$file = trim(@$_GET['file']);
@@ -30,10 +31,10 @@ class Action extends ActionAbstract
 		    die("empty \$_GET['file']");
 		}
 		$tmp = explode('/', $file);
-
 		$param = explode('_', array_shift($tmp));
 
-		$file = ROOT_PATH.'/Uploads/'.implode('/', $tmp);
+		$file = ROOT_PATH.'/'.implode('/', $tmp);
+		
 		if (!file_exists($file)) {
 		    die("file is not exists");
 		}
@@ -83,7 +84,19 @@ class Action extends ActionAbstract
 		echo $im;
 		exit;
 	}
+	
+	function test(){
+		$filename = ROOT_PATH.'/upload/12/2009_11_07_21.26.21.jpg';
+
+		$exif = exif_read_data($filename, 'IFD0');
+		print_r($exif);
+		echo date('Y-m-d h:m:s', $exif['FileDateTime']);
+		echo $exif['FileSize'];
+		echo $exif['MimeType'];
+		echo $exif['COMPUTED']['Height'];
+		echo $exif['COMPUTED']['Width'];
+		echo $exif['DateTimeOriginal'];
+		
+		
+	}
 }
-
-
-?>
