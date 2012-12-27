@@ -23,7 +23,7 @@ class Action extends AdminAbstract
 		
 		// Settings
 		//$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload";
-		$pathUpload = DIRECTORY_SEPARATOR .'upload';
+		$pathUpload = DIRECTORY_SEPARATOR . 'upload' . DIRECTORY_SEPARATOR . $album_id;
 		$targetDir = ROOT_PATH . $pathUpload;
 
 		$cleanupTargetDir = true; // Remove old files
