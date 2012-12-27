@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1-DEV, created on 2012-12-27 15:26:51
+<?php /* Smarty version Smarty-3.1-DEV, created on 2012-12-27 21:18:38
          compiled from "/Library/WebServer/Documents/photo/Templates/admin/dashboard.html" */ ?>
 <?php /*%%SmartyHeaderCode:14979526550dbafc3614d58-61620282%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,13 +7,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9164b093ce3cd8280bb353240bac2ca685b8f8f8' => 
     array (
       0 => '/Library/WebServer/Documents/photo/Templates/admin/dashboard.html',
-      1 => 1356574544,
+      1 => 1356613930,
       2 => 'file',
     ),
     'c083ede22f068d6517d266e9fd36f035efd72a60' => 
     array (
       0 => '/Library/WebServer/Documents/photo/Templates/admin/layout.html',
-      1 => 1356589577,
+      1 => 1356613930,
       2 => 'file',
     ),
   ),

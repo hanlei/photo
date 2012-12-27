@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1-DEV, created on 2012-12-27 15:26:54
+<?php /* Smarty version Smarty-3.1-DEV, created on 2012-12-27 21:18:41
          compiled from "/Library/WebServer/Documents/photo/Templates/admin/album/list.html" */ ?>
 <?php /*%%SmartyHeaderCode:102469584850dbcce7d669e6-39089097%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,19 +7,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '99d22d2feaa275263d78d89bc41f4f9200a8ccc8' => 
     array (
       0 => '/Library/WebServer/Documents/photo/Templates/admin/album/list.html',
-      1 => 1356588825,
+      1 => 1356613930,
       2 => 'file',
     ),
     'c083ede22f068d6517d266e9fd36f035efd72a60' => 
     array (
       0 => '/Library/WebServer/Documents/photo/Templates/admin/layout.html',
-      1 => 1356589577,
+      1 => 1356613930,
       2 => 'file',
     ),
     '18c680323633bbee6f906cccadc8c43aacd33310' => 
     array (
       0 => '/Library/WebServer/Documents/photo/Templates/admin/page.html',
-      1 => 1356576066,
+      1 => 1356613930,
       2 => 'file',
     ),
   ),
@@ -102,7 +102,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <?php /*  Call merged included template "admin/page.html" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate('admin/page.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '102469584850dbcce7d669e6-39089097');
-content_50dbf83e5dc844_86435279($_smarty_tpl);
+content_50dc4ab109cf60_79939934($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "admin/page.html" */?>
 			<tbody>
                 <?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
@@ -160,9 +160,9 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
         });
         </script>
 	</body>
-</html><?php }} ?><?php /* Smarty version Smarty-3.1-DEV, created on 2012-12-27 15:26:54
+</html><?php }} ?><?php /* Smarty version Smarty-3.1-DEV, created on 2012-12-27 21:18:41
          compiled from "/Library/WebServer/Documents/photo/Templates/admin/page.html" */ ?>
-<?php if ($_valid && !is_callable('content_50dbf83e5dc844_86435279')) {function content_50dbf83e5dc844_86435279($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['pager']->value)&&$_smarty_tpl->tpl_vars['pager']->value->getPages()>1){?>
+<?php if ($_valid && !is_callable('content_50dc4ab109cf60_79939934')) {function content_50dc4ab109cf60_79939934($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['pager']->value)&&$_smarty_tpl->tpl_vars['pager']->value->getPages()>1){?>
 <tfoot>
 	<tr>
 		<td colspan="5" class="pagination">
