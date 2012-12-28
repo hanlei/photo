@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2012 年 12 月 27 日 17:41
+-- 生成日期: 2012 年 12 月 28 日 14:39
 -- 服务器版本: 5.5.9
 -- PHP 版本: 5.3.6
 
@@ -51,35 +51,21 @@ CREATE TABLE IF NOT EXISTS `tilt_images` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '照片id',
   `album_id` int(10) unsigned NOT NULL COMMENT '相册ID',
   `url` varchar(255) NOT NULL COMMENT '照片地址',
+  `size` int(10) NOT NULL,
+  `height` int(6) NOT NULL,
+  `width` int(6) NOT NULL,
+  `date` int(10) NOT NULL,
   `mime` varchar(32) NOT NULL COMMENT '图片mime',
   `description` varchar(255) NOT NULL COMMENT '图片描述',
   `created` int(10) unsigned NOT NULL COMMENT '创建日起',
   `updated` int(10) unsigned NOT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- 转存表中的数据 `tilt_images`
 --
 
-INSERT INTO `tilt_images` (`id`, `album_id`, `url`, `mime`, `description`, `created`, `updated`) VALUES
-(1, 15, '/upload/2012_09_14_13.52.51.jpg', 'image/jpeg', '', 1356599148, 1356599148),
-(2, 15, '/upload/2012_09_14_13.53.30.jpg', 'image/jpeg', '', 1356599149, 1356599149),
-(3, 15, '/upload/2012_09_14_14.40.01.jpg', 'image/jpeg', '', 1356599149, 1356599149),
-(4, 15, '/upload/2012_09_15_09.25.39.jpg', 'image/jpeg', '', 1356599150, 1356599150),
-(5, 15, '/upload/2012_09_15_12.08.56.jpg', 'image/jpeg', '', 1356599150, 1356599150),
-(6, 15, '/upload/2012_09_16_09.45.08.jpg', 'image/jpeg', '', 1356599151, 1356599151),
-(7, 15, '/upload/2012_09_16_09.49.46.jpg', 'image/jpeg', '', 1356599151, 1356599151),
-(8, 15, '/upload/2012_09_16_15.15.14.jpg', 'image/jpeg', '', 1356599152, 1356599152),
-(9, 15, '/upload/2012_09_17_15.14.06.jpg', 'image/jpeg', '', 1356599153, 1356599153),
-(10, 15, '/upload/2012_09_18_13.55.07.jpg', 'image/jpeg', '', 1356599153, 1356599153),
-(11, 15, '/upload/2012_09_20_22.32.25.jpg', 'image/jpeg', '', 1356599154, 1356599154),
-(12, 15, '/upload/2012_10_03_14.06.02.jpg', 'image/jpeg', '', 1356599155, 1356599155),
-(13, 15, '/upload/2012_10_10_18.43.15.jpg', 'image/jpeg', '', 1356599155, 1356599155),
-(14, 15, '/upload/2012_10_11_19.17.59.jpg', 'image/jpeg', '', 1356599156, 1356599156),
-(15, 15, '/upload/2012_10_15_19.41.11.jpg', 'image/jpeg', '', 1356599157, 1356599157),
-(16, 15, '/upload/2012_10_16_18.41.16.jpg', 'image/jpeg', '', 1356599158, 1356599158),
-(17, 15, '/upload/2012_10_21_10.28.45.jpg', 'image/jpeg', '', 1356599159, 1356599159),
-(18, 15, '/upload/2012_10_23_21.34.38.jpg', 'image/jpeg', '', 1356599160, 1356599160),
-(19, 15, '/upload/2012_12_14_15.11.36.jpg', 'image/jpeg', '', 1356599164, 1356599164),
-(20, 15, '/upload/2012_12_21_18.22.42.jpg', 'image/jpeg', '', 1356599165, 1356599165);
+INSERT INTO `tilt_images` (`id`, `album_id`, `url`, `size`, `height`, `width`, `date`, `mime`, `description`, `created`, `updated`) VALUES
+(29, 15, '/upload/15/2009_06_25_18.56.24_4.jpg', 14651, 240, 180, 1245927384, 'image/jpeg', '', 1356676656, 1356676656),
+(30, 15, '/upload/15/2009_07_11_17.52.32_4.jpg', 21801, 240, 180, 1247305952, 'image/jpeg', '', 1356676656, 1356676656);

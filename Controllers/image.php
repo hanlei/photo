@@ -84,19 +84,4 @@ class Action extends ActionAbstract
 		echo $im;
 		exit;
 	}
-	
-	function test(){
-		$filename = ROOT_PATH.'/upload/12/2009_11_07_21.26.21.jpg';
-
-		$exif = exif_read_data($filename, 'IFD0');
-		print_r($exif);
-		echo date('Y-m-d h:m:s', $exif['FileDateTime']);
-		echo $exif['FileSize'];
-		echo $exif['MimeType'];
-		echo $exif['COMPUTED']['Height'];
-		echo $exif['COMPUTED']['Width'];
-		echo $exif['DateTimeOriginal'];
-		
-		
-	}
 }
