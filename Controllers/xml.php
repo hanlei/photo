@@ -15,9 +15,9 @@ class Action extends ActionAbstract
 		$xml .= '<tiltviewergallery>'."\n";
 		$xml .= '<photos>'."\n";
 		foreach($imgs as $img) {
-			$xml .= "<photo imageurl='". SITE_URL .$img['url']."' linkurl=''>"."\n";
+			$xml .= "<photo imageurl='/?url=image&file=600/". $img['id']."' linkurl=''>"."\n";
 			$xml .= "<title>".$img['mime']."</title>"."\n";
-			$xml .= "<description>" . date('Y-m-d h:m:s', $img['updated']) . "</description>"."\n";
+			$xml .= "<description>" . date('Y-m-d h:m:s', $img['date']) . "</description>"."\n";
 			$xml .= '</photo>'."\n";
 		}
 		$xml .= '</photos>'."\n";

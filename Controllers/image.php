@@ -6,8 +6,7 @@
  */
 
 class Action extends ActionAbstract
-{
-
+{	
 	function index()
 	{
 		set_time_limit(0);
@@ -26,14 +25,18 @@ class Action extends ActionAbstract
 		*/
 		header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 
+		
 		$file = trim(@$_GET['file']);
 		if (empty($file)) {
 		    die("empty \$_GET['file']");
 		}
-		$tmp = explode('/', $file);
+		$tmp = explode('/', $file);	
 		$param = explode('_', array_shift($tmp));
-
-		$file = ROOT_PATH.'/'.implode('/', $tmp);
+		$data = _model('images')->read(array('id'=>current($tmp)));
+		if(!$data['url']){
+			die("date['url'] is error");
+		}
+		$file = ROOT_PATH.'/'. $data['url'];
 		
 		if (!file_exists($file)) {
 		    die("file is not exists");
